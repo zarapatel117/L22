@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction to Objects in JavaScript</title>
+</head>
+<body>
+    <h2>Introduction to Objects in JavaScript</h2>
+
+    <p> Object and Properties:</p>
+    <p id="objectDemo"></p>
+
+    <p> Math Object - Trigonometric Functions:</p>
+    <p id="mathDemo"></p>
+
+    <p> Function with Arguments - Find Max:</p>
+    <p id="maxDemo"></p>
+
+    <script>
+      
+        var person = {
+            firstName: "I",
+            age: 20
+        };
+        document.getElementById("objectDemo").innerHTML =
+            person.firstName + " am " + person.age + " years old.";
+
+        var sinValue = Math.sin(30);   
+        var cosValue = Math.cos(60);   
+        var tanValue = Math.tan(45); 
+
+        document.getElementById("mathDemo").innerHTML =
+            "sin(30) = " + sinValue.toFixed(2) + "<br>" +
+            "cos(60) = " + cosValue.toFixed(2) + "<br>" +
+            "tan(45) = " + tanValue.toFixed(2);
+
+            function findMAX() {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        document.getElementById("maxDemo").innerHTML =
+            "Maximum number is: " + findMAX(10, 22, 55, 3, 89, 17);
+    </script>
+</body>
+</html>
